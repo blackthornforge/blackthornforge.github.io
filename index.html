@@ -3,52 +3,329 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blackthorn Forge</title>
-<meta name="description" content="Blackthorn Forge makes Ashes of Thornfield, a dark fantasy hack-and-slash action RPG for Android.">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<title>Ashes of Thornfield – Free Dark Fantasy Action RPG for Android</title>
+<meta name="description" content="Ashes of Thornfield is a free dark fantasy isometric action RPG for Android. Four classes, 25+ bosses, Set and Unique loot, online co-op for up to 8 players and a PvP arena.">
+<link rel="canonical" href="https://blackthornforge.github.io/">
+<meta name="theme-color" content="#0d0a08">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Blackthorn Forge">
+<meta property="og:title" content="Ashes of Thornfield – Free Dark Fantasy Action RPG">
+<meta property="og:description" content="Four classes, 25+ bosses, deep loot and online co-op for up to 8 players. Free on Google Play.">
+<meta property="og:url" content="https://blackthornforge.github.io/">
+<meta property="og:image" content="https://blackthornforge.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ashes of Thornfield – Free Dark Fantasy Action RPG">
+<meta name="twitter:description" content="Four classes, 25+ bosses, deep loot and online co-op for up to 8 players. Free on Google Play.">
+<meta name="twitter:image" content="https://blackthornforge.github.io/img/og.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Ashes of Thornfield","operatingSystem":"Android","applicationCategory":"GameApplication","genre":"Action RPG","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Blackthorn Forge","url":"https://blackthornforge.github.io/"},"url":"https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield","image":"https://blackthornforge.github.io/img/og.jpg"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#0d0a08; --panel:#17120e; --gold:#e8c37a; --text:#e6ddd0; --dim:#a39684; --line:#3a2e22; }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  a { color:var(--gold); }
-  header { max-width:960px; margin:0 auto; padding:20px 16px; display:flex; justify-content:space-between; align-items:center; }
-  header .brand { font-family:Cinzel,serif; color:var(--gold); font-size:20px; text-decoration:none; }
-  nav a { margin-left:18px; color:var(--dim); text-decoration:none; }
-  main { max-width:960px; margin:0 auto; padding:0 16px 48px; }
-  .hero { width:100%; border-radius:10px; border:1px solid var(--line); display:block; }
-  h1 { font-family:Cinzel,serif; color:var(--gold); font-size:34px; margin:28px 0 8px; }
-  p.lead { color:var(--dim); font-size:18px; margin-top:0; }
-  .btn { display:inline-block; background:var(--gold); color:#1a120a; font-weight:700; padding:12px 22px; border-radius:8px; text-decoration:none; margin:8px 0 24px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
-  .grid img { width:100%; border-radius:8px; border:1px solid var(--line); display:block; }
-  ul { padding-left:20px; }
-  footer { border-top:1px solid var(--line); color:var(--dim); font-size:14px; text-align:center; padding:20px 16px; }
+:root{
+  --bg:#0d0a08; --bg2:#14100c; --panel:#1a140f; --line:#3a2e22; --line2:#5a4630;
+  --gold:#e8c37a; --gold2:#b8904a; --text:#e9e1d4; --dim:#a89a87;
+  --serif:Cinzel,"Trajan Pro",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:#1a120a;padding:8px 12px;border-radius:6px;z-index:20}
+.skip:focus{left:8px}
+
+/* header */
+.top{position:sticky;top:0;z-index:10;background:rgba(13,10,8,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,46,34,.6)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-family:var(--serif);font-weight:700;color:var(--gold);text-decoration:none;font-size:18px;letter-spacing:.04em;white-space:nowrap}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{color:var(--dim);text-decoration:none;font-size:15px}
+.nav a:hover{color:var(--text)}
+.nav .cta{color:#1a120a;background:var(--gold);padding:7px 14px;border-radius:6px;font-weight:700}
+.nav .cta:hover{color:#1a120a;background:#f2d394}
+@media (max-width:720px){.nav a:not(.cta){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(82vh,700px);display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line);padding:0}
+.hero-bg{position:absolute;inset:0;background:url(img/hero.jpg) 62% 30%/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(13,10,8,.55) 0%,rgba(13,10,8,.15) 30%,rgba(13,10,8,.7) 70%,var(--bg) 100%),
+  radial-gradient(ellipse at 30% 80%,rgba(13,10,8,.6),transparent 60%)}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:64px;width:100%}
+@media (max-width:720px){
+  .hero{display:block;min-height:0}
+  .hero-bg{position:relative;inset:auto;height:66vw;background-position:68% 20%}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(13,10,8,.2) 0%,rgba(13,10,8,0) 40%,rgba(13,10,8,.75) 85%,var(--bg) 100%)}
+  .hero .wrap{padding-top:0;padding-bottom:48px;margin-top:-28px}
+}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin:0 0 10px}
+.hero h1{font-family:var(--serif);font-weight:700;color:var(--gold);font-size:clamp(38px,7vw,76px);line-height:1.05;margin:0 0 14px;text-shadow:0 2px 24px rgba(0,0,0,.8)}
+.hero .lead{font-size:clamp(17px,2.1vw,20px);max-width:620px;margin:0 0 28px;color:#efe6d8;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#1a120a;font-weight:700;padding:14px 24px;border-radius:8px;text-decoration:none;font-size:16px;box-shadow:0 6px 24px rgba(232,195,122,.18)}
+.btn:hover{background:#f2d394}
+.btn svg{width:20px;height:20px}
+.btn.ghost{background:rgba(13,10,8,.55);color:var(--text);border:1px solid var(--line2);box-shadow:none}
+.btn.ghost:hover{border-color:var(--gold2);color:var(--gold)}
+.note{margin:14px 0 0;font-size:14px;color:var(--dim)}
+
+/* sections */
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--bg2)}
+.head{max-width:680px;margin-bottom:36px}
+h2{font-family:var(--serif);color:var(--gold);font-size:clamp(26px,3.6vw,38px);line-height:1.15;margin:0 0 12px}
+.head p{color:var(--dim);margin:0;font-size:17px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.gallery button{all:unset;cursor:zoom-in;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000;grid-column:span 2}
+.gallery button:nth-child(1),.gallery button:nth-child(2),.gallery button:nth-child(6),.gallery button:nth-child(7){grid-column:span 3}
+.gallery img{width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;transition:transform .35s ease}
+.gallery button:hover img{transform:scale(1.03)}
+.gallery button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (max-width:760px){.gallery{grid-template-columns:1fr}.gallery button,.gallery button:nth-child(n){grid-column:auto}}
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);overflow:visible}
+dialog::backdrop{background:rgba(0,0,0,.88)}
+dialog img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line2)}
+dialog .x{position:absolute;top:-44px;right:0;background:none;border:1px solid var(--line2);color:var(--text);border-radius:6px;padding:4px 12px;font-size:15px;cursor:pointer}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.features{grid-template-columns:1fr}}
+.feat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.feat .ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(232,195,122,.08);border:1px solid rgba(232,195,122,.25);margin-bottom:14px}
+.feat .ico svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.feat h3{margin:0 0 6px;font-size:18px;color:var(--text)}
+.feat p{margin:0;color:var(--dim);font-size:15px}
+
+/* classes */
+.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:1000px){.classes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.classes{grid-template-columns:1fr}}
+.cls{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.cls img{aspect-ratio:3/2;object-fit:cover;width:100%;height:auto}
+.cls div{padding:18px 20px 22px}
+.cls h3{font-family:var(--serif);color:var(--gold);margin:0 0 4px;font-size:21px}
+.cls .role{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2);margin:0 0 10px}
+.cls p{margin:0;color:var(--dim);font-size:15px}
+
+/* about / updates */
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.about p{color:var(--dim);font-size:17px;margin:0 0 14px}
+.facts{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:baseline}
+.facts li::before{content:"";flex:none;width:7px;height:7px;transform:rotate(45deg) translateY(-2px);background:var(--gold2)}
+.updates{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.updates h3{margin:0 0 14px;font-family:var(--serif);color:var(--gold);font-size:20px}
+.upd{padding:12px 0;border-top:1px solid var(--line)}
+.upd:first-of-type{border-top:0;padding-top:0}
+.upd time{font-size:13px;color:var(--gold2);letter-spacing:.06em}
+.upd p{margin:4px 0 0;color:var(--dim);font-size:15px}
+
+/* final cta */
+.final{text-align:center;padding:96px 0;background:linear-gradient(180deg,rgba(13,10,8,.82),rgba(13,10,8,.92)),url(img/shot_storm_s.jpg) center/cover}
+.final h2{font-size:clamp(28px,4.4vw,46px)}
+.final p{color:var(--dim);margin:0 auto 28px;max-width:560px;font-size:17px}
+.final .btns{justify-content:center}
+
+footer{padding:36px 0;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{color:var(--dim)}
+footer a:hover{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gallery img{transition:none}}
 </style>
 </head>
 <body>
-<header>
-  <a class="brand" href="./">Blackthorn Forge</a>
-  <nav><a href="privacy.html">Privacy</a><a href="mailto:ashesofthornfield@outlook.com">Contact</a></nav>
-</header>
-<main>
-  <img class="hero" src="hero.jpg" alt="Ashes of Thornfield: dark fantasy action RPG">
-  <h1>Ashes of Thornfield</h1>
-  <p class="lead">A dark fantasy isometric hack-and-slash action RPG for Android. Fast combat, deep loot and a long endgame. Play offline or with friends.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield">Get it on Google Play</a>
-  <div class="grid">
-    <img src="shot1.jpg" alt="Mage casting meteor on a boss">
-    <img src="shot2.jpg" alt="Fighter unleashing dragon spirits">
-    <img src="shot3.jpg" alt="Necromancer raising an army of the dead">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">Blackthorn Forge</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#gameplay">Gameplay</a>
+      <a href="#features">Features</a>
+      <a href="#classes">Classes</a>
+      <a href="#about">About</a>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield">Play free</a>
+    </nav>
   </div>
-  <ul>
-    <li>Four classes: Warrior, Mage (Fire, Cold, Lightning, Poison), Necromancer and Fighter.</li>
-    <li>Skills that evolve every 5 levels.</li>
-    <li>25+ bosses, Normal, Nightmare and Hell difficulty, and the Ashen Reach endgame.</li>
-    <li>Normal, Magic, Rare, Set and Unique loot, gems and sockets.</li>
-    <li>Co-op up to 8 players, online or on the same Wi-Fi.</li>
-    <li>Free to play. Optional rewarded ads only. No account needed.</li>
-  </ul>
+</header>
+
+<main id="main">
+  <section class="hero" aria-label="Ashes of Thornfield">
+    <div class="hero-bg" role="img" aria-label="A Mage calls down meteors and a fire phoenix on a pack of monsters"></div>
+    <div class="wrap">
+      <p class="eyebrow">Dark fantasy action RPG · Android</p>
+      <h1>Ashes of Thornfield</h1>
+      <p class="lead">Fight through a cursed land, face more than 25 bosses and hunt for legendary loot. Play solo offline, or team up online with up to 8 players.</p>
+      <div class="btns">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8 1 .6l15.6-9c.4-.3.4-.9 0-1.1L5 2c-.5-.3-1 0-1 .6Z"/></svg>
+          Get it on Google Play
+        </a>
+        <a class="btn ghost" href="#gameplay">See gameplay</a>
+      </div>
+      <p class="note">Free to play · Optional rewarded ads · No account needed</p>
+    </div>
+  </section>
+
+  <section id="gameplay">
+    <div class="wrap">
+      <div class="head">
+        <h2>Real gameplay</h2>
+        <p>Every image below is taken from the game. Tap one to see it full size.</p>
+      </div>
+      <div class="gallery">
+        <button data-full="img/shot_meteor.jpg" aria-label="View full size: Mage meteor storm"><img src="img/shot_meteor_s.jpg" alt="A Mage calls down a storm of meteors" loading="lazy" width="640" height="320"></button>
+        <button data-full="img/shot_boss.jpg" aria-label="View full size: boss fight"><img src="img/shot_boss_s.jpg" alt="A Warrior and an undead army fight Gorrak the Chieftain on Hell difficulty" loading="lazy" width="640" height="320"></button>
+        <button data-full="img/shot_fighter.jpg" aria-label="View full size: Fighter dragons"><img src="img/shot_fighter_s.jpg" alt="A Fighter unleashes golden dragon spirits" loading="lazy" width="640" height="320"></button>
+        <button data-full="img/shot_necro.jpg" aria-label="View full size: Necromancer army"><img src="img/shot_necro_s.jpg" alt="A Necromancer leads an army of skeletons" loading="lazy" width="640" height="320"></button>
+        <button data-full="img/shot_storm.jpg" aria-label="View full size: lightning storm"><img src="img/shot_storm_s.jpg" alt="A lightning storm tears through monsters" loading="lazy" width="640" height="320"></button>
+        <button data-full="img/shot_blizzard.jpg" aria-label="View full size: Ashen Reach blizzard"><img src="img/shot_blizzard_s.jpg" alt="A blizzard in the Ashen Reach endgame" loading="lazy" width="640" height="320"></button>
+        <button data-full="img/shot_loot.jpg" aria-label="View full size: loot and inventory"><img src="img/shot_loot_s.jpg" alt="Inventory with a Unique item and its stats" loading="lazy" width="640" height="320"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <h2>Built for the long hunt</h2>
+        <p>Quick to pick up on a phone, deep enough to play for months.</p>
+      </div>
+      <div class="features">
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 17.5 3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2"/></svg></div>
+          <h3>Fast, punchy combat</h3>
+          <p>Virtual joystick, auto-aim attack and four skill buttons. Made for touch from the start.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1.5 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.5-2.5 1.5-3.5C9 9 10 10 11 10c0-3 0-5 1-8ZM6 22h12"/></svg></div>
+          <h3>Skills that evolve</h3>
+          <p>Skills level up as you use them in battle. Every 5 levels a skill changes its look and how it plays.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>25+ bosses</h3>
+          <p>Each boss has its own attacks. Beat them on Normal, then return on Nightmare and Hell.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l3 6-9 12L3 9l3-6Z"/><path d="M3 9h18M12 21 8 9l4-6 4 6-4 12"/></svg></div>
+          <h3>Loot worth chasing</h3>
+          <p>Normal, Magic, Rare, Set and Unique items. Socket gems and unlock gem resonance bonuses.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4 1.6 4.5 4.5"/></svg></div>
+          <h3>Co-op and PvP</h3>
+          <p>Play with up to 8 people online or on the same Wi-Fi, or settle it in the PvP Arena.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5a7 7 0 0 1 14 0"/><path d="M2 9a11 11 0 0 1 20 0"/><path d="m3 3 18 18"/><circle cx="12" cy="17" r="1.5"/></svg></div>
+          <h3>Plays offline</h3>
+          <p>No account and no login. Your progress stays on your phone, and solo play works without internet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="wrap">
+      <div class="head">
+        <h2>Choose your class</h2>
+        <p>Four classes, each with its own skills, gear and way to play.</p>
+      </div>
+      <div class="classes">
+        <article class="cls">
+          <img src="img/class_warrior.jpg" alt="Warrior fighting a boss" loading="lazy" width="660" height="440">
+          <div><h3>Warrior</h3><p class="role">Melee · Frontline</p><p>Heavy armor and big weapons. Charges in, takes the hits and cleaves through crowds.</p></div>
+        </article>
+        <article class="cls">
+          <img src="img/class_mage.jpg" alt="Mage casting fire spells" loading="lazy" width="660" height="440">
+          <div><h3>Mage</h3><p class="role">Fire · Cold · Lightning · Poison</p><p>Four schools of magic, from meteor storms and blizzards to lightning and poison blooms.</p></div>
+        </article>
+        <article class="cls">
+          <img src="img/class_necro.jpg" alt="Necromancer with a skeleton army" loading="lazy" width="660" height="440">
+          <div><h3>Necromancer</h3><p class="role">Summoner · Bone &amp; soul fire</p><p>Raises skeletons from the fallen and commands an army of the dead.</p></div>
+        </article>
+        <article class="cls">
+          <img src="img/class_fighter.jpg" alt="Fighter striking with dragon spirits" loading="lazy" width="660" height="440">
+          <div><h3>Fighter</h3><p class="role">Martial arts · Speed</p><p>Lightning-fast strikes that call golden dragon spirits to crush whole packs of monsters.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="alt">
+    <div class="wrap two">
+      <div class="about">
+        <h2>About the game</h2>
+        <p>Ashes of Thornfield is made by Blackthorn Forge, a small independent studio. It is a classic isometric hack-and-slash built for phones: short sessions when you have five minutes, a long endgame when you have more.</p>
+        <p>The game is free. It is supported by optional rewarded ads, for example to revive your character. You never have to watch an ad to keep playing.</p>
+        <ul class="facts">
+          <li>Normal, Nightmare and Hell difficulty, plus the Ashen Reach endgame</li>
+          <li>Character level up to 99, skills up to level 25 with gear</li>
+          <li>Online rooms, same-Wi-Fi play and a PvP Arena</li>
+        </ul>
+      </div>
+      <aside class="updates" aria-label="Development updates">
+        <h3>Latest updates</h3>
+        <div class="upd"><time datetime="2026-11">November 2026</time><p>Ashes of Thornfield launches worldwide on Google Play.</p></div>
+        <div class="upd"><time datetime="2026-11">November 2026</time><p>Online rooms and the PvP Arena: play with friends anywhere, up to 8 players.</p></div>
+        <div class="upd"><time datetime="2026-11">November 2026</time><p>Stability fixes for online play.</p></div>
+        <div class="upd"><p>Found a bug or have an idea? <a href="mailto:ashesofthornfield@outlook.com">Send us feedback</a>.</p></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>The ashes are waiting</h2>
+      <p>Download Ashes of Thornfield free on Google Play.</p>
+      <div class="btns">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8 1 .6l15.6-9c.4-.3.4-.9 0-1.1L5 2c-.5-.3-1 0-1 .6Z"/></svg>
+          Get it on Google Play
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Blackthorn Forge · <a href="privacy.html">Privacy Policy</a> · ashesofthornfield@outlook.com</footer>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Blackthorn Forge</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:ashesofthornfield@outlook.com">ashesofthornfield@outlook.com</a>
+      <a href="https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield">Google Play</a>
+    </nav>
+  </div>
+</footer>
+
+<dialog id="viewer" aria-label="Screenshot">
+  <button class="x" type="button" aria-label="Close">Close</button>
+  <img src="" alt="">
+</dialog>
+<script>
+(function(){
+  var d=document.getElementById('viewer'); if(!d||!d.showModal) return;
+  var im=d.querySelector('img');
+  document.querySelectorAll('.gallery button').forEach(function(b){
+    b.addEventListener('click',function(){im.src=b.dataset.full;im.alt=b.querySelector('img').alt;d.showModal();});
+  });
+  d.querySelector('.x').addEventListener('click',function(){d.close();});
+  d.addEventListener('click',function(e){if(e.target===d)d.close();});
+})();
+</script>
 </body>
 </html>
