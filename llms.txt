@@ -1,0 +1,9 @@
+# Ashes of Thornfield
+
+> Ashes of Thornfield is a free dark fantasy isometric action RPG for Android by Blackthorn Forge. Four classes (Warrior, Mage, Necromancer, Fighter), 25+ bosses, Normal/Nightmare/Hell difficulty, Set and Unique loot, gem sockets, offline single-player, co-op for up to 8 players (online or same Wi-Fi) and a PvP Arena. Free, supported by optional rewarded ads. Android only; not on iOS. Independent game, not affiliated with Blizzard Entertainment or Diablo.
+
+## Links
+- [Home](https://blackthornforge.github.io/): overview, screenshots, classes
+- [Game guide](https://blackthornforge.github.io/dark-fantasy-android-arpg/): gameplay, classes, loot, gems, co-op, FAQ
+- [Google Play](https://play.google.com/store/apps/details?id=com.phamtinh.ashesofthornfield): download
+- [Privacy Policy](https://blackthornforge.github.io/privacy.html)
