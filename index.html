@@ -58,6 +58,16 @@
    "author": {
     "@id": "https://blackthornforge.github.io/#org"
    },
+   "trailer": {
+    "@type": "VideoObject",
+    "name": "Ashes of Thornfield - Official Trailer",
+    "description": "Official gameplay trailer: four classes, boss fights, loot and gems in Ashes of Thornfield, a free dark fantasy action RPG for Android.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/B2rmtwBJY4s/maxresdefault.jpg",
+    "uploadDate": "2026-11-18",
+    "duration": "PT59S",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/B2rmtwBJY4s",
+    "url": "https://youtu.be/B2rmtwBJY4s"
+   },
    "publisher": {
     "@id": "https://blackthornforge.github.io/#org"
    }
@@ -143,6 +153,8 @@ section.alt{background:var(--bg2)}
 h2{font-family:var(--serif);color:var(--gold);font-size:clamp(26px,3.6vw,38px);line-height:1.15;margin:0 0 12px}
 .head p{color:var(--dim);margin:0;font-size:17px}
 
+.video{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000;margin:0 0 16px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 /* gallery */
 .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
 .gallery button{all:unset;cursor:zoom-in;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000;grid-column:span 2}
@@ -243,8 +255,9 @@ footer a:hover{color:var(--gold)}
     <div class="wrap">
       <div class="head">
         <h2>Real gameplay</h2>
-        <p>Every image below is taken from the game. Tap one to see it full size.</p>
+        <p>The trailer and every image below are taken from the game. Tap an image to see it full size.</p>
       </div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/B2rmtwBJY4s" title="Ashes of Thornfield - Official Trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       <div class="gallery">
         <button data-full="img/shot_meteor.jpg" aria-label="View full size: Mage meteor storm"><img src="img/shot_meteor_s.jpg" alt="A Mage calls down a storm of meteors" loading="lazy" width="640" height="320"></button>
         <button data-full="img/shot_boss.jpg" aria-label="View full size: boss fight"><img src="img/shot_boss_s.jpg" alt="A Warrior and an undead army fight Gorrak the Chieftain on Hell difficulty" loading="lazy" width="640" height="320"></button>
